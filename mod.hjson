@@ -1,0 +1,10 @@
+
+displayName: "[cyan]LIBRARY"
+name: "library"
+author: "C9"
+description: "A Mindustry Java mod template."
+version: 1.0
+minGameVersion: 150
+
+java: true
+main: "library.Main"
