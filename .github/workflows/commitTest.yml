@@ -1,5 +1,4 @@
-name: Build Mod
-
+name: Build_Mod
 on: [push, pull_request]
 
 jobs:

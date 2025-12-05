@@ -7,7 +7,7 @@ import mindustry.mod.*;
 import mindustry.ui.dialogs.*;
 
 public class Main extends Mod{
-
+    /// {@link mindustry.content.Blocks}
     public Main(){
     }
 
