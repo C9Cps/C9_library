@@ -13,7 +13,7 @@ public class Main extends Mod{
 
     @Override
     public void loadContent(){
-        Log.info("Loading some example content.");
+        Log.info("Loading the library.");
     }
 
 }
