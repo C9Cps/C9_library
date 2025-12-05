@@ -16,7 +16,7 @@ import mindustry.world.meta.Stat;
 import mindustry.world.meta.StatUnit;
 
 public class HeatDrill extends Drill {
-    ///?
+    ///??
     public DrawBlock drawer = new DrawDefault();
     /** Base heat requirement for 100% efficiency. */
     public float heatRequirement = 10f;

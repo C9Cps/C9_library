@@ -13,7 +13,7 @@ public class Main extends Mod{
 
     @Override
     public void loadContent(){
-        Log.info("Loading the library.");
+        Log.info("Loading the C9_library.");
     }
 
 }
