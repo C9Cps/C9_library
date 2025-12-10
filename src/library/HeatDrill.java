@@ -10,14 +10,18 @@ import mindustry.graphics.Pal;
 import mindustry.ui.Bar;
 import mindustry.world.blocks.heat.HeatConsumer;
 import mindustry.world.blocks.production.Drill;
-import mindustry.world.draw.DrawBlock;
-import mindustry.world.draw.DrawDefault;
+import mindustry.world.draw.*;
 import mindustry.world.meta.Stat;
 import mindustry.world.meta.StatUnit;
 
 public class HeatDrill extends Drill {
     ///??
-    public DrawBlock drawer = new DrawDefault();
+    public DrawBlock drawer = new DrawMulti(){{
+        new DrawRegion("-rotator"){{spinSprite = true; rotateSpeed = 2;}};
+        new DrawDefault();
+        new DrawRegion("-top");
+        new DrawHeatInput();
+    }};
     /** Base heat requirement for 100% efficiency. */
     public float heatRequirement = 10f;
     /** After heat meets this requirement, excess heat will be scaled by this number. */
