@@ -27,6 +27,7 @@ public class HeatDrill extends Drill {
 
     public HeatDrill(String name) {
         super(name);
+        squareSprite
     }
     @Override
     public void setStats(){
