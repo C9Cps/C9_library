@@ -16,12 +16,7 @@ import mindustry.world.meta.StatUnit;
 
 public class HeatDrill extends Drill {
     ///??
-    public DrawBlock drawer = new DrawMulti(){{
-        new DrawRegion("-rotator"){{spinSprite = true; rotateSpeed = 2;}};
-        new DrawDefault();
-        new DrawRegion("-top");
-        new DrawHeatInput();
-    }};
+    public DrawBlock drawer = new DrawDefault();
     /** Base heat requirement for 100% efficiency. */
     public float heatRequirement = 10f;
     /** After heat meets this requirement, excess heat will be scaled by this number. */
@@ -83,6 +78,16 @@ public class HeatDrill extends Drill {
 
             super.updateTile();
         }
+        @Override
+        public void draw(){
+            drawer.draw(this);
+        }
+        @Override
+        public void drawLight(){
+            super.drawLight();
+            drawer.drawLight(this);
+        }
+
 
         @Override
         public float heatRequirement(){
