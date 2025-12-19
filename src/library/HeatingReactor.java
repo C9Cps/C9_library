@@ -54,7 +54,6 @@ public class HeatingReactor extends NuclearReactor {
         @Override
         public void draw(){
             drawer.draw(this);
-
             Draw.color(coolColor, hotColor, heat);
             Fill.rect(x, y, size * tilesize, size * tilesize);
 
