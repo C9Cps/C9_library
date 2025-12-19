@@ -31,19 +31,21 @@ public class HeatDrill extends Drill {
     public void setStats(){
         super.setStats();
 
+        if(heatRequirement > 0){
         stats.add(Stat.input, heatRequirement, StatUnit.heatUnits);
         stats.add(Stat.maxEfficiency, (int)(maxEfficiency * 100f), StatUnit.percent);
+        }
     }
     @Override
     public void setBars(){
         super.setBars();
-
+        if(heatRequirement > 0){
         addBar("heat", (HeatDrillBuild entity) ->
                 new Bar(() ->
                         Core.bundle.format("bar.heatpercent", (int)(entity.heat + 0.01f), (int)(entity.efficiencyScale() * 100 + 0.01f)),
                         () -> Pal.lightOrange,
                         () -> entity.heat / heatRequirement));
-    }
+    }}
 
     @Override
     public void load(){
@@ -74,7 +76,7 @@ public class HeatDrill extends Drill {
 
         @Override
         public void updateTile(){
-            heat = calculateHeat(sideHeat);
+            if (heatRequirement > 0) heat = calculateHeat(sideHeat);
 
             super.updateTile();
         }
