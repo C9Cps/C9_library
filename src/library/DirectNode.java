@@ -52,9 +52,7 @@ public class DirectNode extends PowerBlock {
     public DirectNode(String name){
         super(name);
         rotate = true;
-        drawArrow = false;
-        replaceable = false;
-        quickRotate = false;
+        drawArrow = replaceable = quickRotate = false;
         consumesPower = outputsPower = false;
         drawDisabled = false;
         envEnabled |= Env.space;
