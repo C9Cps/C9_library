@@ -10,7 +10,7 @@ public class Main extends Mod{
 
     @Override
     public void loadContent(){
-        //example.load();
+        example.load();
         Log.info("Loading the C9_library.");
     }
 

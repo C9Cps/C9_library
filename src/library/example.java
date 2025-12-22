@@ -10,7 +10,7 @@ public class example {
     public static Block
             DirectNode, HeatingReactor;
     public static void load() {
-        DirectNode = new HeatingReactor("dir-node"){{
+        DirectNode = new DirectNode("dir-node"){{
             requirements(Category.power, with(Items.copper, 6));
         }};
     }
