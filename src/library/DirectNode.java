@@ -219,7 +219,6 @@ public class DirectNode extends PowerBlock {
             Arrays.fill(links, null);
             Arrays.fill(dests, null);
         }
-
         public void updateDirections(){
             for(int ij = 0; ij < 2; ij ++){
                 int rot = this.rotation;
