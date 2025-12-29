@@ -227,8 +227,8 @@ public class DirectNode extends PowerBlock {
                 int i = ij*2 + rot;
                 var prev = links[i];
                 var dir = Geometry.d4[i];
-                links[i/2] = null;
-                dests[i/2] = null;
+                links[i] = null;
+                dests[i] = null;
                 int offset = size/2;
                 //find first block with power in range
                 for(int j = 1 + offset; j <= range + offset; j++){
